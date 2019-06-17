@@ -1,0 +1,8 @@
+extends ../layouts/main.pug
+block content
+  .container
+    header
+      h1= metahuman.title
+
+    div
+      = blog.content || "The Metahuman is processing..."

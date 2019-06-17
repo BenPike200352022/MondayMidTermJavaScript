@@ -1,0 +1,25 @@
+form(action=(metahuman ? `/metahumans/update` : "/metahumans"), method="POST")
+  if metahuman
+    input(type="hidden", name="id", value=metahuman.id)
+
+  .form-group
+    label Alias
+    input.form-control(name="metahuman[alias]", required, value=(metahuman ? metahuman.alias : null))
+
+  .form-group
+    label Full Name
+    input.form-control(name="metahuman[fullName]", required, value=(metahuman ? metahuman.fullName : null))
+
+  .form-group
+    label Affiliation
+    input.form-control(name="metahuman[affiliation]", required, value=(metahuman ? metahuman.affiliation : null))
+
+  .form-group
+    label Type
+    select.form-control(name="metahuman[type]", required)
+      each type in ['Superhero', 'Villain', 'Antihero']
+        option(value=type, selected=(metahuman && metahuman.type === metahuman ? true : false))= metahuman.type
+  
+  .form-group
+    button.btn.btn-light(type="submit") Submit
+

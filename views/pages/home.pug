@@ -1,0 +1,150 @@
+extends ../layouts/main.pug
+block content
+  .home.container-fluid.max-height
+    .row.max-height
+      .col-sm-5.max-height.flexit
+        .divy
+          header.ml-5
+            h1 Midterm Monday
+              br
+              small COMP-2068
+          .card.objective
+            .card-body
+              h5.card-title Objective
+              hr
+              .card-text.mt-3
+                p
+                  | The year is 2077 and registration has become necessary for metahumans. You are tasked with creating an application that will allow the public to register known supers and be able to publically view it. No authentication will be required!
+                  br
+                  strong VIVA LA NORMS!!!
+
+      .col-sm-7.max-height.flexit
+        ul.tasks
+          li.card
+            .card-body
+              h5.card-title Task #1
+              hr
+              .card-text.mt-3
+                h6
+                  strong Instructions
+
+                p
+                  | Create/Repair a new model to store the metahuman's information:
+                ul.ml-2
+                  li
+                    | Alias
+                  li
+                    | Full Name
+                  li
+                    | Affiliation
+                  li
+                    | Superhero, Villain, or Antihero (enum)
+          li.card
+            .card-body
+              h5.card-title Task #2
+              hr
+              .card-text.mt-3
+                h6
+                  strong Instructions
+
+                p
+                  | Create/Repair a new controller to manage the views and model with the following actions:
+                ul.ml-2
+                  li
+                    | index
+                  li
+                    | show
+                  li
+                    | new
+                  li
+                    | edit
+                  li
+                    | create
+                  li
+                    | update
+                  li
+                    | destroy
+          li.card
+            .card-body
+              h5.card-title Task #3
+              hr
+              .card-text.mt-3
+                h6
+                  strong Instructions
+
+                p
+                  | Create/Repair the necessary routes to point to each controller action:
+                ul.ml-2
+                  li
+                    | index
+                  li
+                    | show
+                  li
+                    | new
+                  li
+                    | edit
+                  li
+                    | create
+                  li
+                    | update
+                  li
+                    | destroy
+          li.card
+            .card-body
+              h5.card-title Task #4
+              hr
+              .card-text.mt-3
+                h6
+                  strong Instructions
+
+                p
+                  | Create/Repair the necessary views to facilitate CRUD of a metahuman:
+                ul.ml-2
+                  li
+                    | index
+                  li
+                    | show
+                  li
+                    | new
+                  li
+                    | edit
+                  li
+                    | form (partial)
+          li.card
+            .card-body
+              h5.card-title Task #5
+              hr
+              .card-text.mt-3
+                h6
+                  strong Instructions
+
+                p
+                  | Create a .env file and add the correct MongoDB connection details:
+                ul.ml-2
+                  li
+                    | DB_URL
+                  li
+                    | DB_USER
+                  li
+                    | DB_PASS
+          li.card
+            .card-body
+              h5.card-title Task #6
+              hr
+              .card-text.mt-3
+                h6
+                  strong Instructions
+
+                p
+                  | Repair the app.js file so you can connect to Mongo:
+          li.card
+            .card-body
+              h5.card-title Task #7
+              hr
+              .card-text.mt-3
+                h6
+                  strong Instructions
+
+                p
+                  | Deploy your application to the internet and submit your link and a GitHub repository link with your files:
+    

@@ -1,0 +1,31 @@
+extends ../layouts/main.pug
+block content
+  .container
+    header(class = whiteHeader)
+      h1= title
+
+    div
+      table.table.table-striped
+        thead
+          tr
+            th Metahuman Alias
+            th Metahuman Full Name
+            th Metahuman Affiliation
+            th 
+
+        tbody
+          each metahuman in metahumans
+            tr
+              td
+                a(href=`/metahumans/${metahuman.id}`)= metahuman.alias
+              td
+                a(href=`/metahumans/${metahuman.id}`)= metahuman.fullName
+              td
+                a(href=`/metahumans/${metahuman.id}`)= metahuman.affiliation
+              td
+                a(href=`/metahumans/${metahuman.id}/edit`) edit
+                = ` | `
+                form.destroy(action=`/metahumans/destroy`, method="POST", onsubmit='return confirm("Are you sure you wish to destroy this beautiful resource?")')
+                  input(type="hidden", name="id", value=`${metahuman.id}`)
+                  input.destroy(type="submit", value="destroy")
+          
